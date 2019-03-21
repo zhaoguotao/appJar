@@ -6413,7 +6413,7 @@ class gui(object):
             canvas = FigureCanvasTkAgg(fig, self.getContainer())
             canvas._tkcanvas.config(background="#c0c0c0", borderwidth=0, highlightthickness=0)
             canvas.fig = fig
-            canvas.show()
+#             canvas.show()
     #        canvas.get_tk_widget().pack(side=TOP, fill=BOTH, expand=1)
             canvas._tkcanvas.pack(side=TOP, fill=BOTH, expand=1)
 
@@ -10809,7 +10809,7 @@ class gui(object):
         else:
             opts = {"parent": self.widgetManager.get(self.Widgets.SubWindow, parent)}
             MessageBox.showinfo(title, message, **opts)
-            self._bringToFront(parent)
+#             self._bringToFront(parent)#Comment this block by zhaoguotao, because it will raise error
 
 
     def errorBox(self, title, message, parent=None):
@@ -10821,7 +10821,7 @@ class gui(object):
         else:
             opts = {"parent": self.widgetManager.get(self.Widgets.SubWindow, parent)}
             MessageBox.showerror(title, message, **opts)
-            self._bringToFront(parent)
+            #self._bringToFront(parent)#Comment this block by zhaoguotao, because it will raise error
 
     def warningBox(self, title, message, parent=None):
         self.topLevel.update_idletasks()
@@ -10832,7 +10832,7 @@ class gui(object):
         else:
             opts = {"parent": self.widgetManager.get(self.Widgets.SubWindow, parent)}
             MessageBox.showwarning(title, message, **opts)
-            self._bringToFront(parent)
+#             self._bringToFront(parent)#Comment this block by zhaoguotao, because it will raise error
 
     def yesNoBox(self, title, message, parent=None):
         self.topLevel.update_idletasks()
